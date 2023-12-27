@@ -1,0 +1,27 @@
+html {
+    font-family: 'JetBrains Mono', monospace;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: rgb(0, 128, 255);
+    transition-duration: 0.4s;
+}
+a:hover{
+    color: black;
+    text-decoration: underline;
+}
+nav{
+    display: flex;
+}
+.title{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.navlinks{
+    position: fixed;
+    right: 0;
+}
