@@ -16,12 +16,13 @@ a:hover{
 }
 nav{
     display: flex;
+    position: fixed;
 }
 .title{
     margin-block-start: 0;
     margin-block-end: 0;
 }
 .navlinks{
-    position: fixed;
     right: 0;
+    position: fixed;
 }
