@@ -32,3 +32,6 @@ iframe{
     top: 0;
     visibility: hidden;
 }
+table, tr, td {
+    border: 1px solid black;
+}
