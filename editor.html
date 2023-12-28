@@ -8,6 +8,16 @@
     <script>document.addEventListener('contextmenu', event => event.preventDefault());</script>
 </head>
 <body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeNinja</title>
+    <link rel="stylesheet" href="style.css">
+    <script>document.addEventListener('contextmenu', event => event.preventDefault());</script>
+</head>
+<body>
     <nav>
         <a href="index.html"><h1 class="title">CodeNinja</h1></a>
         <div class="navlinks">
@@ -19,7 +29,7 @@
     <br>
     <br>
     <p>You have logged in successfully!</p>
-    <table>
+    <table id="courses" style="display: none;">
         <tr>
             <td>
                 No.
@@ -45,8 +55,8 @@
         </tr>
     </table>
     <br>
-    <button onclick="back()"> <<< Back <<< </button>
-    <table id="html">
+    <button onclick="back()"> <<< Back to Courses <<< </button>
+    <table style="visibility: visible;" id="html">
         
         <tr>
             <td>HTML Tutorial</td>
@@ -55,7 +65,7 @@
             <td><a href="intro.html" onclick="intro()">Introductions</a></td>
         </tr>
         <tr>
-            <td><a href="">Editor</a></td>
+            <td><a href="editor.html">Editor</a></td>
         </tr>
         <tr>
             <td><a href="">Basic</a></td>
@@ -69,12 +79,17 @@
         
         function html(){
             var html = document.getElementById("html");
-            html.style.visibility = "visible";
+            html.style.display = "block";
         }
         function back(){
             var html = document.getElementById("html");
-            html.style.visibility = "hidden";
+            var courses = document.getElementById("courses");
+            html.style.display = "none";
+            courses.style.display = "block";
         }
     </script>
+</body>
+</html>
+    <p>You can edit your HTML file using Note Pad</p>
 </body>
 </html>

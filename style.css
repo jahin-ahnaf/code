@@ -1,6 +1,8 @@
 html {
     font-family: 'JetBrains Mono', monospace;
     overflow: hidden;
+    background-color: black;
+    color: lime;
 }
 body{
     margin: 0;
@@ -8,11 +10,11 @@ body{
 }
 a {
     text-decoration: none;
-    color: rgb(0, 128, 255);
+    color: rgb(191, 255, 0);
     transition-duration: 0.4s;
 }
 a:hover{
-    color: black;
+    color: white;
     text-decoration: underline;
 }
 nav{
@@ -33,5 +35,24 @@ iframe{
     visibility: hidden;
 }
 table, tr, td {
-    border: 1px solid black;
+    border: 1px solid lime;
+}
+#html {
+    visibility: hidden;
+}
+button{
+    background: #191919;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: rgb(191, 255, 0);
+}
+input{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    background: #191919;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    color: lime;
 }
