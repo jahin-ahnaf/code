@@ -30,33 +30,7 @@
     <iframe id="iframe" height="1920" width="100%" src="main.html"></iframe>
 
     <script>
-        document.addEventListener('contextmenu', event => event.preventDefault());
-        function stringToHash(str) {
-            // Use CryptoJS to create a SHA-256 hash
-            const hashedString = CryptoJS.SHA256(CryptoJS.enc.Utf8.parse(str)).toString(CryptoJS.enc.Hex);
-
-            return hashedString;
-        }
-
-        var codes = ["6d218458fe44b951d1335cd86e7c3d018aceb8e9166fde520865910814dda8dc"];
-        var main = document.getElementById("iframe");
-        var formMain = document.getElementById("formMain");
-
-        function codeauth() {
-            var code = document.getElementById("code");
-            var codeValue = code.value;
-
-            const hashedString = stringToHash(codeValue);
-
-            if (codes.includes(hashedString)) {
-                main.style.visibility = "visible";
-                formMain.style.visibility = "hidden";
-            }
-            else {
-                main.style.visibility = "hidden";
-                formMain.style.visibility = "visible";
-            }
-        }
+        var _0x55bded=_0x4f2a;(function(_0x54a2e8,_0x25c84c){var _0x2fb6b9=_0x4f2a,_0xf88eae=_0x54a2e8();while(!![]){try{var _0x24c275=parseInt(_0x2fb6b9(0x86))/0x1+-parseInt(_0x2fb6b9(0x78))/0x2*(-parseInt(_0x2fb6b9(0x8c))/0x3)+-parseInt(_0x2fb6b9(0x80))/0x4*(parseInt(_0x2fb6b9(0x90))/0x5)+-parseInt(_0x2fb6b9(0x8e))/0x6*(parseInt(_0x2fb6b9(0x7d))/0x7)+parseInt(_0x2fb6b9(0x8f))/0x8+parseInt(_0x2fb6b9(0x85))/0x9*(-parseInt(_0x2fb6b9(0x8b))/0xa)+-parseInt(_0x2fb6b9(0x84))/0xb;if(_0x24c275===_0x25c84c)break;else _0xf88eae['push'](_0xf88eae['shift']());}catch(_0x35c551){_0xf88eae['push'](_0xf88eae['shift']());}}}(_0xc509,0xd0eda),document[_0x55bded(0x8d)](_0x55bded(0x89),_0x4ca70d=>_0x4ca70d['preventDefault']()));function stringToHash(_0xcdd6ba){var _0x1e79d6=_0x55bded;const _0x5d1939=CryptoJS[_0x1e79d6(0x88)](CryptoJS[_0x1e79d6(0x83)]['Utf8'][_0x1e79d6(0x7f)](_0xcdd6ba))['toString'](CryptoJS[_0x1e79d6(0x83)][_0x1e79d6(0x7c)]);return _0x5d1939;}var codes=[_0x55bded(0x87)],main=document['getElementById'](_0x55bded(0x81)),formMain=document[_0x55bded(0x93)](_0x55bded(0x7b));function _0x4f2a(_0x473483,_0x5ed278){var _0xc509cd=_0xc509();return _0x4f2a=function(_0x4f2a46,_0x32b590){_0x4f2a46=_0x4f2a46-0x78;var _0x37f592=_0xc509cd[_0x4f2a46];return _0x37f592;},_0x4f2a(_0x473483,_0x5ed278);}function codeauth(){var _0x2d4538=_0x55bded,_0x74c8b3=document['getElementById'](_0x2d4538(0x8a)),_0x592a1a=_0x74c8b3[_0x2d4538(0x91)];const _0xddb5f5=stringToHash(_0x592a1a);codes[_0x2d4538(0x82)](_0xddb5f5)?(main[_0x2d4538(0x79)][_0x2d4538(0x7a)]=_0x2d4538(0x7e),formMain[_0x2d4538(0x79)]['visibility']=_0x2d4538(0x92)):(main[_0x2d4538(0x79)][_0x2d4538(0x7a)]='hidden',formMain[_0x2d4538(0x79)][_0x2d4538(0x7a)]=_0x2d4538(0x7e));}function _0xc509(){var _0x117fda=['SHA256','contextmenu','code','366370EwVhsJ','2554815Chowgo','addEventListener','150CFVKhg','5370424mmqoND','1148955qlrYLa','value','hidden','getElementById','2SUZkzw','style','visibility','formMain','Hex','234556zaxdWH','visible','parse','4eJlOEq','iframe','includes','enc','238535lFEoQC','99Tibiqg','825045YHzUvD','6d218458fe44b951d1335cd86e7c3d018aceb8e9166fde520865910814dda8dc'];_0xc509=function(){return _0x117fda;};return _0xc509();}
     </script>
 </body>
 </html>
