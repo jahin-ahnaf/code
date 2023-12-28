@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeNinja</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><h1 class="title">CodeNinja</h1></a>
+        <div class="navlinks">
+            <a>Home</a>
+            <a>Forum</a>
+            <a>About</a>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <p><b>Fill up the registration form:</b></p>
+    <form>
+        <input placeholder="Handle">
+        <input placeholder="Email Address" type="email">
+        <input placeholder="Password" type="password">
+        <br>
+        <br>
+        <label>Account Type:</label>
+        <select name="Account Type" id="acctype">
+            <option value="Default">Default (Basic)</option>
+            <option value="Basic">Basic</option>
+            <option value="Premium">Premium</option>
+        </select>
+        <button onsubmit="join()" type="submit">Join</button>
+    </form>
+    <p>Have an account? <a href="join.html">Sign In</a></p>
+    <script>
+    
+    </script>
+</body>
+</html>
