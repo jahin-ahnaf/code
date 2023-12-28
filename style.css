@@ -1,5 +1,6 @@
 html {
     font-family: 'JetBrains Mono', monospace;
+    overflow: hidden;
 }
 body{
     margin: 0;
