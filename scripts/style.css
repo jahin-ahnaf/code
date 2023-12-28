@@ -26,3 +26,8 @@ nav{
     right: 0;
     position: fixed;
 }
+iframe{
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+}

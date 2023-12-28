@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeNinja</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
 </head>
 <body>
+    <div id="formMain">
     <nav>
         <a href="index.html"><h1 class="title">CodeNinja</h1></a>
         <div class="navlinks">
@@ -19,8 +21,42 @@
     <br>
     <br>
     <p><b>Enter your secret code:</b></p>
-    <input placeholder="code" type="password">
-    <button onclick="codeauth()">Join</button>
+    <div>
+        <input id="code" placeholder="code" type="password">
+        <button onclick="codeauth()">Join</button>
+    </div>
     <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+</div>
+    <iframe id="iframe" height="1920" width="100%" src="main.html"></iframe>
+
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        function stringToHash(str) {
+            // Use CryptoJS to create a SHA-256 hash
+            const hashedString = CryptoJS.SHA256(CryptoJS.enc.Utf8.parse(str)).toString(CryptoJS.enc.Hex);
+
+            return hashedString;
+        }
+
+        var codes = ["6d218458fe44b951d1335cd86e7c3d018aceb8e9166fde520865910814dda8dc"];
+        var main = document.getElementById("iframe");
+        var formMain = document.getElementById("formMain");
+
+        function codeauth() {
+            var code = document.getElementById("code");
+            var codeValue = code.value;
+
+            const hashedString = stringToHash(codeValue);
+
+            if (codes.includes(hashedString)) {
+                main.style.visibility = "visible";
+                formMain.style.visibility = "hidden";
+            }
+            else {
+                main.style.visibility = "hidden";
+                formMain.style.visibility = "visible";
+            }
+        }
+    </script>
 </body>
 </html>
