@@ -2,7 +2,7 @@
 
 #include <iostream>
 using namespace std;
-
+//bruh
 int main(){
     int n;
     string a;
