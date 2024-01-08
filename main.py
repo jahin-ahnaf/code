@@ -16,18 +16,15 @@ player.x = 100
 player.y = 100
 
 while True:
+    player.x += 10
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
 
-
-        if (player.x == 500):
-            player.right = 0
-            player.top += 5
-            player.right -= 5
-        else:
-            player.right += 10
+        if player.x > 500:
+            player.x = 0
+        
         
 
         
