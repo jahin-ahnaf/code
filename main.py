@@ -15,24 +15,32 @@ player = playerImg.get_rect()
 player.x = 100
 player.y = 100
 
+speedX = 5
+speedY = 0
+
 while True:
-    player.x += 10
+    player.x += speedX
+    player.y += speedY
+    
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
 
-        if player.x > 500:
-            player.x = 0
+    if player.x >= 450:
+        speedX = 0
+        speedY = 5
         
-        
+    if player.y >= 450:
+        speedX = -5
+        speedY = 0
 
-        
-        display.fill((255,255,255))
+    if player.x < 50:
+        speedX = 5
+        speedY = -5
+    
+    display.fill((255,255,255))
+    display.blit(playerImg, player)
+    pygame.display.update()
 
-        display.blit(playerImg, player)
-        pygame.display.flip()
-
-        clock.tick(60)
-
-pygame.quit()
+    clock.tick(60)
