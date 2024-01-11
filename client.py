@@ -24,12 +24,15 @@ def receive():
         try:
             # Receive messages from the server
             message = client.recv(1024).decode('utf-8')
-            chat_box.insert(tk.END, message + '\n')
+            if message:
+                chat_box.insert(tk.END, message + '\n')
+                chat_box.yview(tk.END)  # Scroll to the bottom to show the latest message
         except:
             # An error occurred, close the connection
             print("An error occurred!")
             client.close()
             break
+
 
 def send(event=None):
     # Send messages to the server
