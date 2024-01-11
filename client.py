@@ -14,7 +14,10 @@ client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((host, port))
 
 # Get the username from the user
-username = simpledialog.askstring("Username", "Enter your username", parent=tk.Tk().withdraw())
+root = tk.Tk()
+root.withdraw()
+username = simpledialog.askstring("Username", "Enter your username", parent=root)
+
 
 def receive():
     while True:
