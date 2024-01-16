@@ -6,6 +6,7 @@ public class App {
         
         for (int i = 0; i < originalStr.length(); i++) {
             reversedStr = originalStr.charAt(i) + reversedStr;
+            System.out.println(reversedStr);
         }
     
         System.out.println("Reversed string: "+ reversedStr);
