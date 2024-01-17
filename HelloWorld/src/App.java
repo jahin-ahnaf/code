@@ -1,20 +1,22 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 
 public class App {
-    public static int sum(int[] numbers)
-  {
-    Arrays.sort(numbers);
-    int ans, i = 0;
-    if (numbers.length > 1){
-        do {
-            ans = numbers[i];
+    public static int sum(int[] numbers){
+        int result = 0;
+        ArrayList<Integer> bruh = new ArrayList<>();
+        for (int i = 0; i < numbers.length; i++){
+            bruh.add(numbers[i]);
         }
-        while (numbers.length < i);
-        return ans;
+        Collections.sort(bruh);
+        bruh.remove(0);
+        bruh.remove(numbers.length - 1);
+        return bruh.get(0);
     }
-    return 0;
-  }
     public static void main(String[] args) {
-        
+        int[] numbers = {10,50,3,4};
+        System.out.println(sum(numbers));
     }
 }
