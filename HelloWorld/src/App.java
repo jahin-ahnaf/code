@@ -1,22 +1,18 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-
 public class App {
-    public static int sum(int[] numbers){
-        int result = 0;
-        ArrayList<Integer> bruh = new ArrayList<>();
-        for (int i = 0; i < numbers.length; i++){
-            bruh.add(numbers[i]);
+    public static String rps(String p1, String p2) {
+        String result = "";
+        if (p1 == p2){
+            result = "Draw!";
         }
-        Collections.sort(bruh);
-        bruh.remove(0);
-        bruh.remove(numbers.length - 1);
-        return bruh.get(0);
+        else if ((p1 == "paper" && p2 == "rock") || (p1 == "rock" && p2 == "scissors") || (p1 == "scissors" && p2 == "paper")) {
+            result = "Player 1 won!";
+        }
+        else {
+            result = "Player 2 won!";
+        }
+        return result;
     }
     public static void main(String[] args) {
-        int[] numbers = {10,50,3,4};
-        System.out.println(sum(numbers));
+        System.out.println(rps("paper", "rock"));
     }
 }
