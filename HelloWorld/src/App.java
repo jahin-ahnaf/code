@@ -1,10 +1,14 @@
 import java.util.ArrayList;
 
 public class App {
-  public static Double multiply(Double a, Double b) {
-    return a * b;
-}
+  public static String accum(String s) {
+    // your code
+    String ans = "";
+    ArrayList<String> list = new ArrayList<String>();
+    
+    return ans;
+   }
     public static void main(String[] args) {
-        System.out.println(repeatStr(8, "Hello"));
+        System.out.println(accum("mew"));
     }
 }
