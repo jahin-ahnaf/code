@@ -1,36 +1,22 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class App {
-    // your code
-    public static Integer calculateTip(double amount, String rating) {
-      // tip tap
-      int tip = 0;
-      double finalTip = 0;
-      String newRatting = rating.toLowerCase();
-      
-      if (!newRatting.equals("terrible") && !newRatting.equals("poor") && !newRatting.equals("good") && !newRatting.equals("great") && !newRatting.equals("excellent")){
-        return null;
-      }
-      else if (newRatting.equals("terrible")){
-        tip = 0;
-      }
-      else if (newRatting.equals("poor")){
-        tip = 5;
-      }
-      else if (newRatting.equals("good")){
-        
-        tip = 10;
-      }
-      else if (newRatting.equals("great")){
-        tip = 15;
-      }
-      else if (newRatting.equals("excellent")){
-        tip = 20;
-      }
-      
-      finalTip = (double) (amount * tip / 100);
-      int ans = (int)(Math.ceil(finalTip));
-      return ans;
+  public static int[] countBy(int x, int n){
+    // Your code here
+    int count = x;
+    ArrayList<Integer> list = new ArrayList<Integer>();
+    for (int i = 0; i < n; i++) {
+      list.add(Integer.valueOf(count));
+      count += x;
     }
+    int[] result = new int[list.size()];
+    for (int i = 0; i < list.size(); i++) {
+      result[i] = list.get(i);
+    }
+    return result;
+  }
     public static void main(String[] args) {
-        System.out.println(calculateTip(30d, "poor"));
+        System.out.println(Arrays.toString(countBy(2,5)));
     }
 }
