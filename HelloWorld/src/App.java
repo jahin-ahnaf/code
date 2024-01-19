@@ -27,8 +27,7 @@ public class App {
       }
       
       finalTip = (double) (amount * tip / 100);
-      Math.round(finalTip);
-      int ans = (int)(finalTip);
+      int ans = (int)(Math.ceil(finalTip));
       return ans;
     }
     public static void main(String[] args) {
