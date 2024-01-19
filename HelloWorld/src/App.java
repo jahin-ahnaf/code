@@ -1,24 +1,37 @@
 public class App {
-  public static String accum(String s) {
     // your code
-    int count = 0;
-    s = s.toLowerCase();
-    char[] bruh = s.toCharArray();
-    StringBuilder ans = new StringBuilder();
-    for (int i = 0; i < s.length(); i++) {
-        count++;
-        ans.append(Character.toUpperCase(bruh[i]));
-        for (int j = 1; j < count; j++){
-          Character.toLowerCase(bruh[i]);
-          ans.append(bruh[i]);
-        }
-        if(i < s.length() - 1){
-          ans.append("-");
-        }
+    public static Integer calculateTip(double amount, String rating) {
+      // tip tap
+      int tip = 0;
+      double finalTip = 0;
+      String newRatting = rating.toLowerCase();
+      
+      if (!newRatting.equals("terrible") && !newRatting.equals("poor") && !newRatting.equals("good") && !newRatting.equals("great") && !newRatting.equals("excellent")){
+        return null;
+      }
+      else if (newRatting.equals("terrible")){
+        tip = 0;
+      }
+      else if (newRatting.equals("poor")){
+        tip = 5;
+      }
+      else if (newRatting.equals("good")){
+        
+        tip = 10;
+      }
+      else if (newRatting.equals("great")){
+        tip = 15;
+      }
+      else if (newRatting.equals("excellent")){
+        tip = 20;
+      }
+      
+      finalTip = (double) (amount * tip / 100);
+      Math.round(finalTip);
+      int ans = (int)(finalTip);
+      return ans;
     }
-    return ans.toString();
-   }
     public static void main(String[] args) {
-        System.out.println(accum("abcde"));
+        System.out.println(calculateTip(30d, "poor"));
     }
 }
