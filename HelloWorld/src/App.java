@@ -1,22 +1,28 @@
+import java.io.CharArrayReader;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 
 public class App {
-  public static int[] countBy(int x, int n){
-    // Your code here
-    int count = x;
-    ArrayList<Integer> list = new ArrayList<Integer>();
-    for (int i = 0; i < n; i++) {
-      list.add(Integer.valueOf(count));
-      count += x;
+  public static Object[] removeEveryOther(Object[] arr) {
+    Object[] newArr;
+    // happy coding
+    if (arr.length % 2 == 0) {
+      newArr = new Object[arr.length / 2];
     }
-    int[] result = new int[list.size()];
-    for (int i = 0; i < list.size(); i++) {
-      result[i] = list.get(i);
+    else {
+      newArr = new Object[(arr.length - 1) / 2 + 1];
     }
-    return result;
+    for (int i = 0; i < newArr.length; i++) {
+      newArr[i] = arr[i * 2];
+    }
+    newArr[0] = arr[0];
+    return newArr;
   }
-    public static void main(String[] args) {
-        System.out.println(Arrays.toString(countBy(2,5)));
-    }
+
+public static void main(String[] args){
+  
+}
 }
