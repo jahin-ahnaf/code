@@ -1,15 +1,14 @@
 public class App {
-  public static boolean validatePin(String pin) {
-    // Your code here...
-    boolean result = false;
-    if ((pin.length() == 4) || (pin.length() == 6)){
-      result = true;
+  public static String findNeedle(Object[] haystack) {
+    // Your code here
+    String result = " ";
+    int index = 0;
+    for (int i = 0; i < haystack.length; i++) {
+      if (haystack[i] == "needle") {
+        index = i;
     }
-    for (int i = 0; i < pin.length(); i++){
-      if (!Character.isDigit(pin.charAt(i))){
-        result = false;
-      }
-    }
+    result = "found the needle at position " + index;
+  }
     return result;
   }
 public static void main(String[] args){
