@@ -1,15 +1,11 @@
 public class App {
-  public static String findNeedle(Object[] haystack) {
-    // Your code here
-    String result = " ";
-    int index = 0;
-    for (int i = 0; i < haystack.length; i++) {
-      if (haystack[i] == "needle") {
-        index = i;
+  public static String convert(boolean b) {
+    if (b) {
+      return "true";
     }
-    result = "found the needle at position " + index;
-  }
-    return result;
+    else {
+      return "false";
+    }
   }
 public static void main(String[] args){
   
