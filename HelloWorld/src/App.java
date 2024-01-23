@@ -6,8 +6,8 @@ public class App {
     String[] arr = null;
     if (s.length() % 2 == 0) {
       arr = new String[s.length()];
-      for (int i = 0; i < s.length(); i++) {
-        arr[i] = s.substring(i, i+1);
+      for (int i = 0; i < s.length() / 2; i++) {
+        arr[i] = String.valueOf(s.charAt(i)) + String.valueOf(s.charAt(i + 1));
       }
     }
     return arr;
