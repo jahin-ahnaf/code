@@ -6,6 +6,6 @@ public class App {
     
 }
 public static void main(String[] args){
-  System.out.println(Arrays.toString(solution("abcdef")));
+  System.out.println(longest("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
 }
 }
